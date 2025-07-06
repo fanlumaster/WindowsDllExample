@@ -8,9 +8,6 @@ add_library(MyDll SHARED
 )
 
 # Let MSVC automatically export all symbols, so we don't have to write __declspec(dllexport) manually
-set_target_properties(MyDll PROPERTIES
-    CXX_STANDARD 17
-)
 if (MSVC)
     set_property(TARGET MyDll PROPERTY WINDOWS_EXPORT_ALL_SYMBOLS ON)
 endif()
